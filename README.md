@@ -6,13 +6,9 @@ To run the script the user has to enter the following command including the requ
 
 `python3 webmap.py -n` [network range to be scanned]
 
-![image](https://github.com/calin-borbeli/WebMap/assets/47243256/71223690-8b57-4fc4-8f9e-431829edfe2a)
-
 Example:
 
 `python3 webmap.py -n 10.0.2.0/24`
-
-![image](https://github.com/calin-borbeli/WebMap/assets/47243256/910a22bc-a803-426c-bc1d-a95844673b43)
 
 ## Requirements
 
@@ -53,5 +49,32 @@ Missing dependencies errors fixes:
 
 There is a short help section that provides users with a description of the script, the required dependencies and how to install any missing dependencies.
 Users can access the help section using the familiar help flags `-h [--help]`:
-python3 webmap.py -h [--help] as shown below:
- 
+
+`python3 webmap.py -h [--help]`
+
+## Results
+
+Once you run the command `python3 webmap.py -n` [network range to be scanned] you may be asked for your password. Webmap requires sudo permissions to run. However, you don't need to use sudo in front of the command but you may need to enter your password if you haven’t run the sudo command for a while.
+
+### Network Discovery
+The script starts by scanning the network for active devices using netdiscover and then it displays the list of active devices ip addresses as shown below:
+
+![image](https://github.com/calin-borbeli/WebMap/assets/47243256/fe2361e1-8867-4194-a482-d096e6b8c6a4)
+
+### OS Identification
+Next, the script identifies the operating systems of the active devices using ping and then displays the list of devices possible operating systems as shown below:
+
+![image](https://github.com/calin-borbeli/WebMap/assets/47243256/7ddca3e3-66b3-4ca5-a851-2818f5fda165)
+
+### Open Ports Identification
+Next, the script scans and identifies any open ports on each active device using nmap, and then displays the open ports for the active device as shown below:
+
+![image](https://github.com/calin-borbeli/WebMap/assets/47243256/32ab4f98-78bb-4884-b5e4-c7732355c173)
+
+### Web Enumeration
+Next, the script checks if any device has port 80 open, and if it does then it conducts a web enumeration using gobuster and identifies common directories and files and outputs the list of directories and files found on the web server. The list is presented as links with the handy option of being able to right click on the link and open the link directly in browser, as shown below:
+
+![image](https://github.com/calin-borbeli/WebMap/assets/47243256/43ee997c-3bef-4f3d-8bdb-cb1bcdddef90)
+
+The script finishes and returns to the terminal prompt.
+
