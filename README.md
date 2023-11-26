@@ -57,7 +57,7 @@ Users can access the help section using the familiar help flags `-h [--help]`:
 
 ## Results
 
-Once you run the command `python3 webmap.py -n` [network range to be scanned] you may be asked for your password. Webmap requires sudo permissions to run. However, you don't need to use sudo in front of the command but you may need to enter your password if you haven’t run the sudo command for a while.
+Once you run the command `python3 webmap.py -n` [network range to be scanned] you may be asked for your password. As already mentioned, Webmap requires sudo permissions to run. However, you don't need to use sudo in front of the command but you may need to enter your password if you haven’t run the sudo command for a while.
 
 ### Network Discovery
 The script starts by scanning the network for active devices using netdiscover and then it displays the list of active devices ip addresses as shown below:
