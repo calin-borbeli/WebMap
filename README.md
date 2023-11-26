@@ -1,5 +1,5 @@
 # WebMap
-Network reconnaissance tool written in python3 and designed for scanning and enumerating web servers
+WebMap is a network reconnaissance tool written in python3 and designed for scanning and enumerating web servers
 
 ![image](https://github.com/calin-borbeli/WebMap/assets/47243256/f55796ce-9363-449a-bbbe-ca6b83e44512)
 
